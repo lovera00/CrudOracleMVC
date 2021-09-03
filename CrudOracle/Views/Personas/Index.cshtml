@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CrudOracle.Models.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_nro_documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pers_fch_nacimiento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_nro_documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pers_fch_nacimiento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Pers_codigo  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Pers_codigo })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

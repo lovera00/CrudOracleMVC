@@ -1,0 +1,62 @@
+﻿@model CrudOracle.Models.Persona
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Persona</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <!--div-- class="form-group">
+        <label asp-for="Pers_codigo" class="control-label"></label>
+        <input asp-for="Pers_codigo" class="form-control" />
+        <span asp-validation-for="Pers_codigo" class="text-danger"></span>
+    </!--div-->
+            <div class="form-group">
+                <label asp-for="Pers_nombre" class="control-label"></label>
+                <input asp-for="Pers_nombre" class="form-control" />
+                <span asp-validation-for="Pers_nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pers_apellido" class="control-label"></label>
+                <input asp-for="Pers_apellido" class="form-control" />
+                <span asp-validation-for="Pers_apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pers_nro_documento" class="control-label"></label>
+                <input asp-for="Pers_nro_documento" class="form-control" />
+                <span asp-validation-for="Pers_nro_documento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pers_correo" class="control-label"></label>
+                <input type="email" asp-for="Pers_correo" class="form-control" />
+                <span asp-validation-for="Pers_correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pers_telefono" class="control-label"></label>
+                <input asp-for="Pers_telefono" class="form-control" />
+                <span asp-validation-for="Pers_telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pers_fch_nacimiento" class="control-label"></label>
+                <input asp-for="Pers_fch_nacimiento" type="date" class="form-control" />
+                <span asp-validation-for="Pers_fch_nacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
